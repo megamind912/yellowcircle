@@ -27,8 +27,9 @@ class YellowCircle(QWidget):
 
     def draw_circle(self, qp):
         d = random.randint(10, 200)
-        qp.setBrush(QColor(255, 255, 0))
-        qp.drawEllipse(self.width() // 2 - d // 2, self.height() // 2 - d // 2, d, d)
+        x, y = random.randint(1, self.width() - d // 2), random.randint(1, self.height() - d // 2)
+        qp.setBrush(QColor('yellow'))
+        qp.drawEllipse(x, y, d, d)
 
 
 if __name__ == '__main__':
